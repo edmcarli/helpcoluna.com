@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <title>Dor nas Costas - Help Coluna 14</title>
+
+<script>
+    var urlBackRedirect = 'https://helpcoluna.com/'; // lembre-se de usar a url sem espaços
+    // não altere nada abaixo dessa linha
+    urlBackRedirect = urlBackRedirect = urlBackRedirect.trim() +
+            (urlBackRedirect.indexOf("?") > 0 ? '&' : '?') +
+            document.location.search.replace('?', '').toString();
+    history.pushState({}, "", location.href);
+    history.pushState({}, "", location.href);
+    window.onpopstate = function () {
+        setTimeout(function () {
+            location.href = urlBackRedirect;
+        }, 1);
+    };
+</script>
+
 <head>
 
 <meta charset="utf-8">
